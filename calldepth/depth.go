@@ -176,6 +176,7 @@ func SetDefault(adapter Adapter) {
 	store.Store(adapter)
 }
 
+// New returns a new Adapter.
 func New(opts ...Option) Adapter {
 	a := &adapter{
 		logger: slog.Default(),
