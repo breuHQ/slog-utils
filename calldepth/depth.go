@@ -82,7 +82,7 @@ func (a *adapter) With(args ...any) Adapter {
 
 func (a *adapter) WithGroup(name string) Adapter {
 	return &adapter{
-		logger: a.logger.WithGroup(name),
+		logger: slog.New(a.logger.Handler().WithGroup(name)),
 		depth:  a.depth,
 	}
 }

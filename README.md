@@ -45,7 +45,7 @@ import (
 func main() {
   adapter := calldepth.NewAdapter(
     calldepth.NewLogger(slog.NewStdLogger()),
-    calldepth.WithCallDepth(4), // 4 is generally a good idea for temporal
+    calldepth.WithCallDepth(5), // 5 for activities, 6 for workflows.
   )
   opts := client.Options{
     HostPort: "localhost:7233",
