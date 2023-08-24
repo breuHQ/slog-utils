@@ -133,11 +133,12 @@ func (a *adapter) log(ctx context.Context, level slog.Level, msg string, args ..
 	}
 
 	var pcs [1]uintptr
+
 	runtime.Callers(a.depth, pcs[:])
 
 	record := slog.NewRecord(time.Now(), level, msg, pcs[0])
-
 	record.Add(args...)
+
 	if ctx == nil {
 		ctx = context.Background()
 	}
@@ -151,11 +152,12 @@ func (a *adapter) logattrs(ctx context.Context, level slog.Level, msg string, at
 	}
 
 	var pcs [1]uintptr
+
 	runtime.Callers(a.depth, pcs[:])
 
 	record := slog.NewRecord(time.Now(), level, msg, pcs[0])
-
 	record.AddAttrs(attrs...)
+
 	if ctx == nil {
 		ctx = context.Background()
 	}
@@ -182,9 +184,11 @@ func New(opts ...Option) Adapter {
 		logger: slog.Default(),
 		depth:  DefaultCallDepth,
 	}
+
 	for _, opt := range opts {
 		opt(a)
 	}
+
 	return a
 }
 
