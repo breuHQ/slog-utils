@@ -1,8 +1,10 @@
 # slog-utils: utilities to work with slog
 
-![GitHub release (by tag)](https://img.shields.io/github/downloads/breuHQ/slog-utils/:tag/total)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/breuHQ/slog-utils)
 ![GitHub go.mod Go version (subdirectory of monorepo)](https://img.shields.io/github/go-mod/go-version/breuHQ/slog-utils)
 [![License](https://img.shields.io/github/license/breuHQ/slog-utils)](./LICENSE)
+![GitHub contributors](https://img.shields.io/github/contributors/breuHQ/slog-utils)
+
 
 Utilities for [slog](https://pkg.go.dev/log/slog) for
 
@@ -26,8 +28,8 @@ go get go.breu.io/slog-utils
 
 **Compatibility**: go >= 1.21
 
-⚠️ Work in Progress
-⚠️ Use this library carefully, log processing can be very costly (!)
+- ⚠️ Work in Progress
+- ⚠️ Use this library carefully, log processing can be very costly (!)
 
 ### 💡 Usage
 
@@ -55,3 +57,14 @@ func main() {
   tclient, err := client.Dial(opts)
 }
 ```
+
+## 👤 Contributors
+
+![Contributors](https://contrib.rocks/image?repo=breuHQ/slog-utils)
+
+
+## 📝 License
+
+Copyright © 2023 [Breu Inc.](https://github.com/breuHQ)
+
+This project is [MIT](./LICENSE) licensed.
